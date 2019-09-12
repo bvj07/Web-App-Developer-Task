@@ -1,0 +1,134 @@
+
+body {
+	font-family: sans-serif;
+	margin: 0;
+}
+
+#main {
+	padding: 30px;
+}
+
+#header-logo {
+	display:block;
+	width: 304px;
+	height: 110px;
+	background-image: url('../img/logo.png');
+}
+
+#header-logo span {
+	display:none;
+}
+
+.product-listing:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#nav li {
+	line-height: 1.5em;
+	display: inline-block;
+}
+
+#nav li a {
+	margin: 15px;
+}
+#nav li a:first-child {
+	margin-left: 0px;
+}
+
+.product {
+	width: 400px;
+	display:inline-block;
+	vertical-align: top;
+	margin: 20px;
+}
+
+.product .product-details {
+	display: flex;
+    justify-content: space-between;
+}
+
+
+#copyright {
+	display:block;
+	margin: 20px;
+}
+
+#overlay {
+    display: none;
+}
+#overlay.show {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);  
+}
+#overlayContent {
+    margin: 200px auto;
+    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    position: relative;
+}
+#closeOverlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    background: none;
+}
+#closeOverlay::before, 
+#closeOverlay::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 60%;
+    top: 50%;
+    left: 20%;
+    margin-top: -2px;
+    background-color: #777;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+#closeOverlay::before {
+    transform: rotate(45deg);
+}
+#closeOverlay::after {
+    transform: rotate(-45deg);
+}
+#closeOverlay:hover::before, 
+#closeOverlay:hover::after {
+    background-color: #000;
+}
+
+.size-container {
+    overflow: hidden;
+    margin: 20px 0;
+}
+.size-container .size {
+    float: left;
+    width: 20px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    color: #444;
+    margin-right: 5px;
+}
